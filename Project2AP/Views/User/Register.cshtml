@@ -1,0 +1,49 @@
+﻿@model Project2AP.Models.User
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="signupform">
+    <div class="container">
+        <div class="title"><div class="title3">Register to purchase ticket online</div></div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="box">
+                <b>@Html.LabelFor(model => model.FirstName)</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "error" })
+            </div>
+            <div class="box">
+                <b>@Html.LabelFor(model => model.LastName)</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "error" })
+            </div>
+            <div class="box">
+                <b>@Html.LabelFor(model => model.ICNumber) (Without '-')</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.ICNumber, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.ICNumber, "", new { @class = "error" })
+            </div>
+            <div class="box">
+                <b>@Html.LabelFor(model => model.PhoneNumber)</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "error" })
+            </div>
+            <div class="box">
+                <b>@Html.LabelFor(model => model.Email)</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error" })
+            </div>
+            <div class="box">
+                <b>@Html.LabelFor(model => model.Password)</b> <span class="compulsory">*</span><br />
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "textbox" } })<br />
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "error" })
+            </div>
+
+            <div class="break"></div>
+            <div class="boxbutton" style="padding:30px 0px;"><input type="submit" value="Sign Up" class="button3" /></div>
+        }
+    </div>
+</section>

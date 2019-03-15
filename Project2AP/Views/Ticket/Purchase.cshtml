@@ -1,0 +1,148 @@
+﻿@model Project2AP.Models.Purchase
+
+@{
+    ViewBag.Title = "Purchase Ticket";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<section id="content-main">
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <table style="width: 100%;">
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="title3">Purchase a Ticket</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding-left: 80px;">
+                        @Html.LabelFor(model => model.Origin)
+                        <br />
+                        @Html.DropDownListFor(model => model.Origin, new[] {
+                                    new SelectListItem() {Text = "Sungai Buloh", Value = "0" },
+                                    new SelectListItem() {Text = "Kampung Selamat", Value = "1" },
+                                    new SelectListItem() {Text = "Kwasa Damansara", Value = "2" },
+                                    new SelectListItem() {Text ="Kwasa Sentral", Value = "3" },
+                                    new SelectListItem() {Text = "Kota Damansara" , Value = "4" },
+                                    new SelectListItem() {Text = "Surian" , Value = "5" },
+                                    new SelectListItem() {Text ="Mutiara Damansara" , Value = "6" },
+                                    new SelectListItem() {Text = "Bandar Utama", Value = "7" },
+                                    new SelectListItem() {Text = "Taman Tun Dr Ismail" , Value = "8" },
+                                    new SelectListItem() {Text = "Philleo Damansara" , Value = "9" },
+                                    new SelectListItem() {Text ="Pusat Bandar Damansara" , Value = "10" },
+                                    new SelectListItem() {Text = "Semantan" , Value = "11" },
+                                    new SelectListItem() {Text = "Muzium Negara", Value = "12" },
+                                    new SelectListItem() {Text = "Pasar Seni", Value = "13" },
+                                    new SelectListItem() {Text = "Merdeka", Value = "14" },
+                                    new SelectListItem() {Text = "Bukit Bintang", Value = "15" },
+                                    new SelectListItem() {Text = "Tun Razak Exchange" , Value = "16" },
+                                    new SelectListItem() {Text = "Cochrane" , Value = "17" },
+                                    new SelectListItem() {Text = "Maluri", Value = "18" },
+                                    new SelectListItem() {Text = "Taman Pertama", Value = "19" },
+                                    new SelectListItem() {Text ="Taman Midah", Value = "20" },
+                                    new SelectListItem() {Text = "Taman Mutiara" , Value = "21" },
+                                    new SelectListItem() {Text = "Taman Connought", Value = "22" },
+                                    new SelectListItem() {Text = "Taman Suntex" , Value = "23" },
+                                    new SelectListItem() {Text = "Sri Raya" , Value = "24" },
+                                    new SelectListItem() {Text = "Bandar Tun Hussein Onn" , Value = "25" },
+                                    new SelectListItem() {Text = "Batu Sebelas Cheras", Value = "26" },
+                                    new SelectListItem() {Text = "Bukit Dukung", Value = "27" },
+                                    new SelectListItem() {Text = "Sungai Jernih", Value = "28" },
+                                    new SelectListItem() {Text = "Stadium Kajang", Value = "29" },
+                                    new SelectListItem() {Text = "Kajang", Value = "30" }
+                                    }, "Select origin station", new { @class = "textbox" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Origin, "", new { @class = "error" })
+                    </td>
+                    <td rowspan="5" style="text-align: right; padding-right: 80px;">
+                        <img src="~/Images/mrt.png" width="370" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding-left: 80px;">
+                        @Html.LabelFor(model => model.Destination)
+                        <br />
+                        @Html.DropDownListFor(model => model.Destination, new[] {
+                                    new SelectListItem() {Text = "Sungai Buloh", Value = "0" },
+                                    new SelectListItem() {Text = "Kampung Selamat", Value = "1" },
+                                    new SelectListItem() {Text = "Kwasa Damansara", Value = "2" },
+                                    new SelectListItem() {Text ="Kwasa Sentral", Value = "3" },
+                                    new SelectListItem() {Text = "Kota Damansara" , Value = "4" },
+                                    new SelectListItem() {Text = "Surian" , Value = "5" },
+                                    new SelectListItem() {Text ="Mutiara Damansara" , Value = "6" },
+                                    new SelectListItem() {Text = "Bandar Utama", Value = "7" },
+                                    new SelectListItem() {Text = "Taman Tun Dr Ismail" , Value = "8" },
+                                    new SelectListItem() {Text = "Philleo Damansara" , Value = "9" },
+                                    new SelectListItem() {Text ="Pusat Bandar Damansara" , Value = "10" },
+                                    new SelectListItem() {Text = "Semantan" , Value = "11" },
+                                    new SelectListItem() {Text = "Muzium Negara", Value = "12" },
+                                    new SelectListItem() {Text = "Pasar Seni", Value = "13" },
+                                    new SelectListItem() {Text = "Merdeka", Value = "14" },
+                                    new SelectListItem() {Text = "Bukit Bintang", Value = "15" },
+                                    new SelectListItem() {Text = "Tun Razak Exchange" , Value = "16" },
+                                    new SelectListItem() {Text = "Cochrane" , Value = "17" },
+                                    new SelectListItem() {Text = "Maluri", Value = "18" },
+                                    new SelectListItem() {Text = "Taman Pertama", Value = "19" },
+                                    new SelectListItem() {Text ="Taman Midah", Value = "20" },
+                                    new SelectListItem() {Text = "Taman Mutiara" , Value = "21" },
+                                    new SelectListItem() {Text = "Taman Connought", Value = "22" },
+                                    new SelectListItem() {Text = "Taman Suntex" , Value = "23" },
+                                    new SelectListItem() {Text = "Sri Raya" , Value = "24" },
+                                    new SelectListItem() {Text = "Bandar Tun Hussein Onn" , Value = "25" },
+                                    new SelectListItem() {Text = "Batu Sebelas Cheras", Value = "26" },
+                                    new SelectListItem() {Text = "Bukit Dukung", Value = "27" },
+                                    new SelectListItem() {Text = "Sungai Jernih", Value = "28" },
+                                    new SelectListItem() {Text = "Stadium Kajang", Value = "29" },
+                                    new SelectListItem() {Text = "Kajang", Value = "30" }
+                                    }, "Select destination station", new { @class = "textbox" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Destination, "", new { @class = "error" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding-left: 80px;">
+                        @Html.LabelFor(model => model.Direction)
+                        <br />
+                        @Html.DropDownListFor(model => model.Direction, new[] {
+                                    new SelectListItem() {Text = "One-way"},
+                                    new SelectListItem() {Text = "Return"}
+                                    }, "Select ticket direction", new { @class = "textbox" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Direction, "", new { @class = "error" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding-left: 80px;">
+                        @Html.LabelFor(model => model.Category)
+                        <br />
+                        @Html.DropDownListFor(model => model.Category, new[] {
+                                    new SelectListItem() {Text = "Standard"},
+                                    new SelectListItem() {Text = "Senior Citizen"},
+                                    new SelectListItem() {Text = "Student"},
+                                    new SelectListItem() {Text = "Disabled"}
+                                    }, "Select passenger category", new { @class = "textbox" })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Category, "", new { @class = "error" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; padding-left: 80px;">
+                        @Html.LabelFor(model => model.Quantity)
+                        <br />
+                        @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "textbox2" } })
+                        <br />
+                        @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "error" })
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; padding-top: 20px;">
+                        <input type="submit" value="Add to Cart" class="button3" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</section>

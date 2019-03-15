@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Google Font API -->
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div id="logo">
+                    <img src="~/Images/rapidkl.png" height="30" />
+                </div>
+
+                <nav id="normalview">
+                    <ul>
+                        @{
+                            if (ViewBag.Title == "Purchase Ticket")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li style="color: #ec2633">Purchase Ticket</li>
+                                <li>@Html.ActionLink("e-Ticket History", "Index", "Ticket")</li>
+                                <li>@Html.ActionLink("Payment History", "Index", "Payment")</li>
+                            }
+
+                            else if (ViewBag.Title == "e-Ticket History")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Purchase Ticket", "Purchase", "Ticket")</li>
+                                <li style="color: #ec2633">e-Ticket History</li>
+                                <li>@Html.ActionLink("Payment History", "Index", "Payment")</li>
+                            }
+
+                            else if (ViewBag.Title == "Payment History")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Purchase Ticket", "Purchase", "Ticket")</li>
+                                <li>@Html.ActionLink("e-Ticket History", "Index", "Ticket")</li>
+                                <li style="color: #ec2633">Payment History</li>
+                            }
+
+                            else if (ViewBag.Title == "Cart" || ViewBag.Title == "Payment Details" || ViewBag.Title == "e-Ticket Details" || ViewBag.Title == "e-Ticket Receipt" || ViewBag.Title == "Payment Details" || ViewBag.Title == "Update Profile")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Purchase Ticket", "Purchase", "Ticket")</li>
+                                <li>@Html.ActionLink("e-Ticket History", "Index", "Ticket")</li>
+                                <li>@Html.ActionLink("Payment History", "Index", "Payment")</li>
+                            }
+
+                            else
+                            {
+                                <li style="color: #ec2633">Home</li>
+                                <li>@Html.ActionLink("Purchase Ticket", "Purchase", "Ticket")</li>
+                                <li>@Html.ActionLink("e-Ticket History", "Index", "Ticket")</li>
+                                <li>@Html.ActionLink("Payment History", "Index", "Payment")</li>
+                            }
+                        }
+                    </ul>
+                </nav>
+
+                <div id="user">
+                    <a href="@Url.Action("Index", "Cart")">
+                        <img src="~/Images/cart.png" width="25" style="padding-left:25px;" />
+                    </a>
+                    <a href="@Url.Action("Update", "User", new { email = Session["Email"] })">
+                        <img src="~/Images/profile.png" width="25" style="padding-left:25px;" />
+                    </a>
+                    <a href="@Url.Action("Logout", "Home")">
+                        <img src="~/Images/logout.png" width="25" style="padding-left:25px;" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div style="width: 100%; height: 66px; background-color: #265BA9; left: 0; padding:0; margin:0;">
+        <center>
+            <table style="width: 90%; height: 66px;">
+                <tr>
+                    <td style="vertical-align: middle; color: #eeeeee; font-size: 11pt;">
+                        This application is developed by Siti Sarah and Afiq Izzuddin using ASP.NET MVC
+                    </td>
+                    <td style="vertical-align: middle; text-align: right; color: #eeeeee; font-size: 11pt;">
+                        ISB42603 Advanced Programming
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+</html>

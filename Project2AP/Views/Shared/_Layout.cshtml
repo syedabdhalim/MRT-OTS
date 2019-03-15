@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <!-- Google Font API -->
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div id="logo">
+                    <img src="~/Images/rapidkl.png" height="30" />
+                </div>
+
+                <nav id="normalview">
+                    <ul>
+                        @{
+                            if (ViewBag.Title == "About")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li style="color: #ec2633">About</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            }
+
+                            else if (ViewBag.Title == "Contact")
+                            {
+
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li style="color: #ec2633">Contact</li>
+                            }
+
+                            else if (ViewBag.Title == "Log In" || ViewBag.Title == "Register")
+                            {
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            }
+
+                            else
+                            {
+                                <li style="color: #ec2633">Home</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            }
+                        }
+                    </ul>
+                </nav>
+
+                <div id="user">
+                    @Html.ActionLink("Log In", "Login", "User", null, new { @class = "button1" })@Html.ActionLink("Sign Up", "Register", "User", null, new { @class = "button2" })
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div style="width: 100%; height: 66px; background-color: #265BA9; left: 0; padding:0; margin:0;">
+        <center>
+            <table style="width: 90%; height: 66px;">
+                <tr>
+                    <td style="vertical-align: middle; color: #eeeeee; font-size: 11pt;">
+                        This application is developed by Siti Sarah and Afiq Izzuddin using ASP.NET MVC
+                    </td>
+                    <td style="vertical-align: middle; text-align: right; color: #eeeeee; font-size: 11pt;">
+                        ISB42603 Advanced Programming
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+</html>

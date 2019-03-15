@@ -1,0 +1,43 @@
+﻿@model Project2AP.Models.User
+
+@{
+    ViewBag.Title = "Log In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="loginform">
+    <div class="container">
+        <div class="box">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <div class="title">
+                    <div class="title3">Welcome back!</div>
+                </div>
+                <p style="padding-bottom: 10px;">
+                    @Html.LabelFor(model => model.Email)
+                    <br />
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "textbox" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "error" })
+                </p>
+                <p>
+                    @Html.LabelFor(model => model.Password)
+                    <br />
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "textbox" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "error" })
+                    <span class="error" style="color: #ec2633;">@ViewBag.Status</span>
+                </p>
+            <br />
+                <input type="submit" value="Log in" class="button3" />
+            }
+        </div>
+
+        <div class="box">
+            <div class="title">
+                <div class="title3">Not yet registered?</div>
+                <p>Sign up for free.</p>
+            </div>
+            <input type="submit" value="Sign up" class="button4" onclick="location.href='@Url.Action("Register", "User")'" />
+        </div>
+    </div>
+</section>

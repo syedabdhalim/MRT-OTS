@@ -1,0 +1,121 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet"
+      type="text/css" />
+@model IPagedList<Project2AP.Models.Purchase>
+
+
+@{
+    if (ViewBag.Roles == "User")
+    {
+        ViewBag.Title = "e-Ticket Details";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        ViewBag.Title = "e-Ticket Details";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+}
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+                <td style="font-size: 15pt;">
+                    e-Ticket Details
+                </td>
+            </tr>
+        </table>
+
+        @foreach (var item in Model)
+        {
+            string date = item.Payment.PaymentDateTime.ToString("dd/MM/yyyy");
+            string time = item.Payment.PaymentDateTime.ToString("HH:mm:ss");
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td class="content-receipt1" rowspan="2">
+                        <div class="rotate-text">
+                            e-Ticket&nbsp;ID:&nbsp;#@Html.DisplayFor(modelItem => item.PurchaseID)
+                        </div>
+                    </td>
+                    <td class="content-receipt2" rowspan="2">
+                        <table>
+                            <tr>
+                                <td colspan="2" style="padding-bottom:20px;">
+                                    <div class="title3">
+                                        @Html.DisplayFor(modelItem => item.Origin) &nbsp;<img src="~/Images/arrow.png" />&nbsp; @Html.DisplayFor(modelItem => item.Destination)
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">NAME</div>
+                                    @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">IC / PASSPORT NUMBER</div>
+                                    @Html.DisplayFor(modelItem => item.User.ICNumber)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">E-MAIL</div>
+                                    @Html.DisplayFor(modelItem => item.User.Email)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">CATEGORY</div>
+                                    @Html.DisplayFor(modelItem => item.Category)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">DIRECTION</div>
+                                    @Html.DisplayFor(modelItem => item.Direction)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">QUANTITY</div>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 20px;" colspan="2">
+                                    <div class="small-text">STATUS</div>
+                                    bla3
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="text-align:right; width:100%;">
+                            <div style="font-size: 15pt">Total Price: &nbsp;RM @Html.DisplayFor(modelItem => item.Subtotal)</div>
+                        </div>
+                    </td>
+                    <td class="content-receipt3">
+                        <table style="width:100%">
+                            <tr>
+                                <td width="50%;">
+                                    <div class="small-text">DATE</div>
+                                    @date
+                                </td>
+                                <td>
+                                    <div class="small-text">TIME</div>
+                                    @time
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="smaller-text">
+                                    <i>* MRT ticket expires after 7 days</i>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-receipt4">
+                        <img src="~/Images/qrcode.png" width="150" />
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</section>

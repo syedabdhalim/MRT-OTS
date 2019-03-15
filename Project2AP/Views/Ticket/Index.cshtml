@@ -1,0 +1,145 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet"
+      type="text/css" />
+@model IPagedList<Project2AP.Models.Purchase>
+
+@{
+    if (ViewBag.Roles == "User")
+    {
+        ViewBag.Title = "e-Ticket History";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        ViewBag.Title = "e-Ticket Record";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+}
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+                <td style="font-size: 15pt; vertical-align: top;">
+                    e-Ticket
+                </td>                
+                <td style="text-align: right">
+                    @{
+                        if (ViewBag.Roles == "Admin")
+                        {
+                            <!-- --------------------- SORT PUNYA DROP DOWN LIST --------------------- -->
+                            using (Html.BeginForm("Index", "Ticket", FormMethod.Get))
+                            {
+                                @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
+                                @:<input type="submit" name="search" class="button3" value="Search" style="padding: 7px 20px 7px 20px" />
+
+                                @:<br /><br />
+                            }
+
+                        }
+                    }
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                </td>
+            </tr>
+        </table>
+        <table class="table-list">
+            <tr>
+                <th>
+                    Ticket ID
+                </th>
+                @{
+                    if (ViewBag.Roles == "Admin")
+                    {
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().User.Email)
+                        </th>
+                    }
+                }
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Origin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Destination)
+                </th>
+                @{
+                    if (ViewBag.Roles == "User")
+                    {
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Direction)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().Category)
+                        </th>
+                    }
+                }
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Quantity)
+                </th>
+                <th>
+                    e-Ticket
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                int id = item.PurchaseID;
+
+                <tr>
+                    <td style="text-align: center;">
+                        #@Html.DisplayFor(modelItem => item.PurchaseID)
+                    </td>
+                    @{
+                        if (ViewBag.Roles == "Admin")
+                        {
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Email)
+                            </td>
+                        }
+                    }
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Origin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Destination)
+                    </td>
+
+                    @{
+                        if (ViewBag.Roles == "User")
+                        {
+
+                            <td style="text-align: center;">
+                                @Html.DisplayFor(modelItem => item.Direction)
+                            </td>
+                            <td style="text-align: center;">
+                                @Html.DisplayFor(modelItem => item.Category)
+                            </td>
+                        }
+                    }
+                    <td style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td style="text-align: center;">
+                        @Html.ActionLink("Ticket Receipt", "Details", new { purchaseId = id }, new { @class = "link" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        @{
+            if (ViewBag.Item == 0)
+            {
+                <div style="width: 100%; text-align: center; font-style: italic; padding-top: 30px;">No record of ticket purchased</div>
+            }
+        }
+
+        <div style="width: 100%; text-align: center;">
+            <div class="pagedList">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { SearchText = ViewBag.SearchText, Page = page }))
+            </div>
+        </div>
+    </div>
+</section>

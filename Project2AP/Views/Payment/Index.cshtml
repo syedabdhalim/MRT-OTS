@@ -1,0 +1,126 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet"
+      type="text/css" />
+@model IPagedList<Project2AP.Models.Payment>
+
+@{
+    if (ViewBag.Roles == "User")
+    {
+        ViewBag.Title = "Payment History";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        ViewBag.Title = "Payment Record";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+}
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+                <td style="font-size: 15pt; vertical-align: top;">
+                    Payment
+                </td>
+
+                <td style="text-align: right">
+                    @{
+                        if (ViewBag.Roles == "Admin")
+                        {
+                            <!-- --------------------- SORT PUNYA DROP DOWN LIST --------------------- -->
+                            using (Html.BeginForm("Index", "Payment", FormMethod.Get))
+                            {
+                                @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
+                                @:<input type="submit" name="search" class="button3" value="Search" style="padding: 7px 20px 7px 20px" />
+
+                                @:<br /><br />
+                            }
+
+                        }
+                    }
+                    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+                </td>
+            </tr>
+        </table>
+        <table class="table-list">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().PaymentID)
+                </th>
+                @{
+                    if (ViewBag.Roles == "Admin")
+                    {
+                        <th>
+                            @Html.DisplayNameFor(model => model.First().User.Email)
+                        </th>
+                    }
+                }
+                <th>
+                    @Html.DisplayNameFor(model => model.First().PaymentMethod)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().PaymentDateTime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().Total)
+                </th>
+                <th>Payment</th>
+                <th>Ticket</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                int id = item.PaymentID;
+                string date = item.PaymentDateTime.ToString("dd/MM/yyyy");
+                string time = item.PaymentDateTime.ToString("HH:mm:ss");
+
+                <tr>
+                    <td style="text-align: center;">
+                        #@Html.DisplayFor(modelItem => item.PaymentID)
+                    </td>
+                    @{
+                        if (ViewBag.Roles == "Admin")
+                        {
+                            <td>
+                                @Html.DisplayFor(modelItem => item.User.Email)
+                            </td>
+                        }
+                    }
+                    <td style="text-align: center;">
+                        @Html.DisplayFor(modelItem => item.PaymentMethod)
+                    </td>
+                    <td style="text-align: center;">
+                        @date<br />
+                        @time
+                    </td>
+                    <td style="text-align: center;">
+                        RM @Html.DisplayFor(modelItem => item.Total)
+                    </td>
+                    <td style="text-align: center;">
+                        @Html.ActionLink("Payment Details", "Details", "Payment", new { paymentId = id }, new { @class = "link" })
+                    </td>
+                    <td style="text-align: center;">
+                        @Html.ActionLink("Ticket Receipt", "Receipt", "Ticket", new { paymentId = id }, new { @class = "link" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+        @{
+            if (ViewBag.Item == 0)
+            {
+                <div style="width: 100%; text-align: center; font-style: italic; padding-top: 30px;">No record of payment</div>
+            }
+        }
+
+        <div style="width: 100%; text-align: center;">
+            <div class="pagedList">
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { SearchText = ViewBag.SearchText, Page = page }))
+            </div>
+        </div>
+    </div>
+</section>

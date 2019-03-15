@@ -1,0 +1,280 @@
+﻿body {
+    color: #333333;
+    font-family: Roboto;
+    font-size: 11pt;
+    padding: 0;
+    margin: 0;
+    background-color: #dddddd;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ----------- HEADER ----------- */
+.header {
+    background: white;
+    padding: 25px 0 25px 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+}
+
+    .header .container {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .header #logo {
+        float: left;
+        padding-right: 50px;
+    }
+
+    .header nav {
+        float: left;
+    }
+
+    .header #normalview a {
+        color: #333333;
+        text-decoration: none;
+    }
+
+        .header #normalview a:hover {
+            color: #ED698F;
+        }
+
+    .header ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header li {
+        display: inline;
+        float: left;
+        padding-right: 40px;
+    }
+
+    .header #user {
+        margin-left: auto;
+    }
+
+.button1 {
+    padding: 7px 14px;
+    background-color: #265BA9;
+    border: #265BA9 1pt solid;
+    width: 90px;
+    border-radius: 5px 0px 0px 5px;
+    color: white;
+    font-size: 11pt;
+    text-decoration: none;
+}
+
+    .button1:hover {
+        cursor: pointer;
+    }
+
+.button2 {
+    padding: 7px 14px;
+    background-color: white;
+    border: #265BA9 1pt solid;
+    width: 90px;
+    border-radius: 0px 5px 5px 0px;
+    color: #265BA9;
+    font-size: 11pt;
+    text-decoration: none;
+}
+
+    .button2:hover {
+        cursor: pointer;
+    }
+
+.button3 {
+    padding: 8px 20px 8px 20px;
+    background-color: #ec2633;
+    border: #ec2633 1pt solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 11pt;
+    text-decoration: none;
+}
+
+    .button3:hover {
+        cursor: pointer;
+    }
+
+.button4 {
+    padding: 8px 20px 8px 20px;
+    background-color: white;
+    border: #ec2633 1pt solid;
+    border-radius: 5px;
+    color: #ec2633;
+    font-size: 11pt;
+    text-decoration: none;
+    width: 100%;
+}
+
+    .button4:hover {
+        cursor: pointer;
+    }
+
+.title3 {
+    font-size: 20pt;
+    padding-bottom: 20px;
+}
+/* --- */
+
+#content-1 {
+    padding: 70px 0 70px 0;
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+    #content-1 .container {
+        padding-top: 60px;
+    }
+
+/* ----- */
+
+#content-3 {
+    background-color: white;
+}
+
+    #content-3 .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 0 60px 0;
+    }
+
+    #content-3 .box {
+        width: 25%;
+        text-align: center;
+    }
+
+/* --- */
+
+#loginform {
+}
+
+    #loginform .container {
+        padding-top: 60px;
+        width: 100%;
+        min-height: 500px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        line-height: 30px;
+    }
+
+    #loginform .box {
+        width: 35%;
+    }
+
+    #loginform .textbox {
+        width: 96%;
+    }
+
+    #loginform .button3,
+    #loginform .container .box .button4 {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    #loginform .title {
+        text-align: center;
+        padding-top: unset;
+        padding-bottom: 10px;
+    }
+
+    #loginform .error {
+        display: block;
+        text-align: right;
+        font-style: italic;
+        color: #999999;
+        font-size: 10pt;
+    }
+
+
+/* --- */
+#signupform .container {
+    width: 100%;
+    min-height: 500px;
+    padding-top: 100px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    line-height: 30px;
+}
+
+#signupform .title {
+    text-align: center;
+    padding-top: unset;
+    padding-bottom: 10px;
+}
+
+#signupform .box {
+    width: 35%;
+    padding: 20px 0 20px 0;
+}
+
+#signupform .box2 {
+    width: 20%;
+    padding: 20px 0 20px 0;
+}
+
+#signupform .boxtitle {
+    width: 80%;
+    padding: 0;
+    font-size: 16pt;
+}
+
+#signupform .break {
+    width: 100%;
+    padding: 0;
+}
+
+#signupform form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#signupform .textbox {
+    width: 96%;
+}
+
+#signupform .box .button3 {
+    margin-top: 10px;
+}
+
+#signupform .compulsory {
+    color: red;
+}
+
+#signupform .error {
+    display: block;
+    text-align: right;
+    font-style: italic;
+    color: #999999;
+    font-size: 10pt;
+}
+
+/*---*/
+.textbox {
+    padding: 7px;
+    background-color: white;
+    border: #d1d2d4 1pt solid;
+    width: 100%;
+    border-radius: 5px;
+    color: black;
+    font-size: 11pt;
+    font-family: 'Rubik', sans-serif;
+}

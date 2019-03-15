@@ -1,0 +1,163 @@
+﻿@model IEnumerable<Project2AP.Models.Purchase>
+
+@{
+    if (ViewBag.Roles == "User")
+    {
+        ViewBag.Title = "e-Ticket Receipt";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        ViewBag.Title = "e-Ticket Receipt";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+
+    string status;
+
+    string firstName = Html.DisplayFor(x => x.First().User.FirstName).ToString();
+    string lastName = Html.DisplayFor(x => x.First().User.LastName).ToString();
+    string icNumber = Html.DisplayFor(x => x.First().User.ICNumber).ToString();
+    string phoneNumber = Html.DisplayFor(x => x.First().User.PhoneNumber).ToString();
+    string email = ViewBag.Email;
+
+    string emailReceipt = "";
+
+    foreach (var item in Model)
+    {
+        emailReceipt = emailReceipt + "<table style=\"border-collapse: collapse; width: 100%;\"><tr><td style=\"text-align:center;\">e-Ticket ID: #" + Html.DisplayFor(x => item.PurchaseID).ToString() + "</td></tr><tr><td>" +
+    "<table><tr><td style=\"background-color:#265BA9; color:white; padding-left:15px; padding-right: 40px;\"><h2>" + Html.DisplayFor(x => item.Origin).ToString() + " to " + Html.DisplayFor(x => item.Destination).ToString() + "</h2></td></tr>" +
+    "<tr><td style=\"background-color:#white; color:black; padding-left:15px; padding-right:15px; padding-top: 15px;\"><table>" +
+    "<tr><td style=\"padding-bottom: 25px; padding-right:15px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">PASSENGER</div>" + firstName + " " + lastName + "</td>" +
+    "<td style=\"padding-bottom: 25px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">IC / PASSPORT</div>" + icNumber + "</td></tr>" +
+    "<tr><td style=\"padding-bottom: 25px; padding-right:15px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">E-MAIL</div>" + email + "</td>" +
+    "<td style=\"padding-bottom: 25px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">CATEGORY</div>" +
+    Html.DisplayFor(x => item.Category).ToString() + "</td></tr>" +
+    "<tr><td style=\"padding-bottom: 25px; padding-right:15px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">DIRECTION</div>" + Html.DisplayFor(x => item.Direction).ToString() + "</td>" +
+    "<td style=\"padding-bottom: 25px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">QUANTITY</div>" + Html.DisplayFor(x => item.Quantity).ToString() + "</td></tr>" +
+    "<tr><td colspan=\"2\" style=\"padding-bottom: 25px;\"><div style=\"margin-bottom:10px; color: #666666; font-size: 11px; letter-spacing: 1px; font-weight:bold;\">DATE AND TIME</div>" + Html.DisplayFor(x => item.Payment.PaymentDateTime).ToString() + "</td></tr></table>" +
+    "<div style=\"text-align:right; width: 100 %; padding-top: 5px;\"><h2>Total Price: &nbsp;RM" + Html.DisplayFor(x => item.Subtotal).ToString() + "</h2></div></td></tr></table><br/>";
+    }
+
+    try
+    {
+        WebMail.SmtpServer = "smtp.gmail.com";
+        WebMail.SmtpPort = 587;
+        WebMail.EnableSsl = true;
+        WebMail.UserName = "sarahdrsam";
+        WebMail.Password = "akuorggila";
+        WebMail.From = "sarahdrsam@gmail.com";
+        WebMail.Send(email, "MRT Ticket Receipt", emailReceipt);
+
+        status = "Successful! The receipt has been sent via e-mail.";
+    }
+
+    catch (Exception)
+    {
+        status = "Successful! However, the receipt could not be sent via e-mail.";
+    }
+
+}
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+                <td style="font-size: 15pt;">
+                    e-Ticket Receipt
+                </td>
+            </tr>
+        </table>
+
+        @foreach (var item in Model)
+        {
+            string date = item.Payment.PaymentDateTime.ToString("dd/MM/yyyy");
+            string time = item.Payment.PaymentDateTime.ToString("HH:mm:ss");
+
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td class="content-receipt1" rowspan="2">
+                        <div class="rotate-text">
+                            e-Ticket&nbsp;ID:&nbsp;#@Html.DisplayFor(modelItem => item.PurchaseID)
+                        </div>
+                    </td>
+                    <td class="content-receipt2" rowspan="2">
+                        <table>
+                            <tr>
+                                <td colspan="2" style="padding-bottom:20px;">
+                                    <div class="title3">
+                                        @Html.DisplayFor(modelItem => item.Origin) &nbsp;<img src="~/Images/arrow.png" />&nbsp; @Html.DisplayFor(modelItem => item.Destination)
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">NAME</div>
+                                    @Html.DisplayFor(modelItem => item.User.FirstName) @Html.DisplayFor(modelItem => item.User.LastName)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">IC / PASSPORT NUMBER</div>
+                                    @Html.DisplayFor(modelItem => item.User.ICNumber)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">E-MAIL</div>
+                                    @Html.DisplayFor(modelItem => item.User.Email)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">CATEGORY</div>
+                                    @Html.DisplayFor(modelItem => item.Category)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px; padding-bottom: 25px;">
+                                    <div class="small-text">DIRECTION</div>
+                                    @Html.DisplayFor(modelItem => item.Direction)
+                                </td>
+                                <td style="padding-bottom: 25px;">
+                                    <div class="small-text">QUANTITY</div>
+                                    @Html.DisplayFor(modelItem => item.Quantity)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 20px;" colspan="2">
+                                    <div class="small-text">STATUS</div>
+                                    @status
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="text-align:right; width:100%;">
+                            <div style="font-size: 15pt">Total Price: &nbsp;RM @Html.DisplayFor(modelItem => item.Subtotal)</div>
+                        </div>
+                    </td>
+                    <td class="content-receipt3">
+                        <table style="width:100%">
+                            <tr>
+                                <td width="50%;">
+                                    <div class="small-text">DATE</div>
+                                    @date
+                                </td>
+                                <td>
+                                    <div class="small-text">TIME</div>
+                                    @time
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="smaller-text">
+                                    <i>* MRT ticket expires after 7 days</i>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content-receipt4">
+                        <img src="~/Images/qrcode.png" width="150" />
+                    </td>
+                </tr>
+            </table>
+            <br />
+        }
+    </div>
+</section>

@@ -1,0 +1,100 @@
+﻿@model Project2AP.Models.Payment
+
+@{
+    ViewBag.Title = "Proceed to Payment";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%; padding-bottom: 30px;">
+            <tr>
+                <td style="font-size: 15pt;">
+                    Proceed to Payment
+                </td>
+            </tr>
+        </table>
+        @using (Html.BeginForm())
+        {
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 50%;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 150px;">
+                                    <b>Name</b>
+                                </td>
+                                <td>
+                                    @ViewBag.Name
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>IC Number</b>
+                                </td>
+                                <td>
+                                    @ViewBag.IcNumber
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>E-mail</b>
+                                </td>
+                                <td>
+                                    @ViewBag.Email
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Phone Number</b>
+                                </td>
+                                <td>
+                                    @ViewBag.PhoneNumber
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width: 50%;">
+                        <table>
+                            <tr>
+                                <td style="width: 150px;">
+                                    <b>Total Price</b>
+                                </td>
+                                <td>
+                                    RM @ViewBag.Total.ToString("0.00")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Ticket Order</b>
+                                </td>
+                                <td>
+                                    @Html.ActionLink("View Order Here", "Index", "Cart")
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>@Html.LabelFor(model => model.PaymentMethod)</b>
+                                </td>
+                                <td>
+                                    @Html.DropDownListFor(model => model.PaymentMethod, new[] {
+                                    new SelectListItem() {Text = "Debit/Credit Card"},
+                                    new SelectListItem() {Text = "Online Banking"},
+                                    new SelectListItem() {Text = "PayPal"},
+                                    new SelectListItem() {Text = "Boost"}
+                                    }, "Select payment method", new { @class = "textbox" })
+
+                                    @Html.ValidationMessageFor(model => model.PaymentMethod, "", new { @class = "error" })
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div style="width: 100%; text-align: right; padding-top: 10px;">
+                <input type="submit" value="Confirm Payment" class="button3" />
+            </div>
+        }
+    </div>
+</section>

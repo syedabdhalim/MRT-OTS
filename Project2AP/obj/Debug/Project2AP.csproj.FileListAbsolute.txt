@@ -1,0 +1,385 @@
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\ApplicationInsights.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Project2AP.dll.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Project2AP.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Project2AP.pdb
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csc.exe
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csc.exe.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csc.rsp
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csi.exe
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csi.exe.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\csi.rsp
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.AppContext.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Console.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.IO.Compression.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.IO.Pipes.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Claims.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.ValueTuple.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Xml.XPath.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\vbc.exe
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\vbc.exe.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\vbc.rsp
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\VBCSCompiler.exe
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Antlr3.Runtime.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.Web.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Newtonsoft.Json.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Helpers.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Mvc.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Optimization.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Razor.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.Razor.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\WebGrease.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Helpers.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Mvc.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Optimization.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.Razor.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Web.WebPages.Razor.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Newtonsoft.Json.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Antlr3.Runtime.pdb
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.AI.Web.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\obj\Debug\Project2AP.csprojAssemblyReference.cache
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\obj\Debug\Project2AP.csproj.CoreCompileInputs.cache
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\obj\Debug\Project2AP.csproj.CopyComplete
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\obj\Debug\Project2AP.dll
+C:\Users\afiq\Desktop\Unikl\sem5\advance programming\projek 2\Project2AP\Project2AP\obj\Debug\Project2AP.pdb
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\ApplicationInsights.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Project2AP.dll.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Project2AP.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Project2AP.pdb
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csc.exe
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csc.exe.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csc.rsp
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csi.exe
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csi.exe.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\csi.rsp
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.AppContext.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Console.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.IO.Compression.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Claims.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.ValueTuple.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\vbc.exe
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\vbc.exe.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\vbc.rsp
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\VBCSCompiler.exe
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Antlr3.Runtime.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.Web.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Optimization.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\WebGrease.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Optimization.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Antlr3.Runtime.pdb
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.AI.Web.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\obj\Debug\Project2AP.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\obj\Debug\Project2AP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\obj\Debug\Project2AP.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\obj\Debug\Project2AP.pdb
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\PagedList.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\PagedList.Mvc.dll
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\PagedList.xml
+C:\Users\ASUS\Desktop\Project2AP\Project2AP\bin\PagedList.Mvc.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\ApplicationInsights.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.dll.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.pdb
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.exe
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.exe.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.rsp
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.exe
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.exe.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.rsp
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.AppContext.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Console.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Compression.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Pipes.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Claims.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.ValueTuple.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.exe
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.exe.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.rsp
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\VBCSCompiler.exe
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Antlr3.Runtime.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Web.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.ApplicationInsights.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.Mvc.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Helpers.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Mvc.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Optimization.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Razor.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Razor.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\WebGrease.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.Mvc.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Helpers.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Mvc.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Optimization.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Razor.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Razor.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Antlr3.Runtime.pdb
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Web.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.dll
+C:\Users\ASUS\Desktop\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.pdb
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\ApplicationInsights.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.dll.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Project2AP.pdb
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.exe
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.exe.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csc.rsp
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.exe
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.exe.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\csi.rsp
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.AppContext.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Collections.Immutable.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Console.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Compression.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.FileSystem.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.IO.Pipes.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.AccessControl.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Claims.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.ValueTuple.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XPath.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.exe
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.exe.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\vbc.rsp
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\VBCSCompiler.exe
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\roslyn\VBCSCompiler.exe.config
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Antlr3.Runtime.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.SqlServer.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.DependencyCollector.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Web.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.WindowsServer.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.ApplicationInsights.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.Web.Infrastructure.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Newtonsoft.Json.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.Mvc.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Diagnostics.DiagnosticSource.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Helpers.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Mvc.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Optimization.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Razor.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Deployment.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Razor.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\WebGrease.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\EntityFramework.SqlServer.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\PagedList.Mvc.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Helpers.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Mvc.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Optimization.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.Razor.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Deployment.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Web.WebPages.Razor.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Newtonsoft.Json.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Antlr3.Runtime.pdb
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\System.Diagnostics.DiagnosticSource.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.DependencyCollector.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.WindowsServer.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.AI.Web.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.csprojResolveAssemblyReference.cache
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.csproj.CoreCompileInputs.cache
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.dll
+D:\Sarah Shamsul Anuar\Projects\Project_SitiSarah_AfiqIzzuddin\Project2AP\obj\Debug\Project2AP.pdb

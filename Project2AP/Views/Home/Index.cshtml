@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+    if (ViewBag.Roles == "User")
+    {
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+
+    else if (ViewBag.Roles == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<section id="content-1">
+    <div class="container">
+        <div class="title3" style="padding-top: 30px;">Mass Rapid Transit</div>
+        <p class="lead">Mass Rapid Transit, better known with its acronym "MRT") is a planned 3-line mass rapid transit system in the Greater Kuala Lumpur conurbation in Malaysia. It envisages a "wheel and spoke" concept comprising two northwest-southeast radial lines and one circle line looping around Kuala Lumpur.</p>
+        <p><a href="https://www.mymrt.com.my/" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+</section>
+
+<section id="content-3">
+    <div class="container">
+        <div class="box">
+            <div style="font-size: 15pt">Park N' Ride</div>
+            <p>
+                <img src="~/Images/img-1.png" />
+            </p>
+            <p><a class="btn btn-default" href="https://www.mymrt.com.my/public/travel-with-mrt/park-n-ride-2/">Learn more &raquo;</a></p>
+        </div>
+        <div class="box">
+            <div style="font-size: 15pt">Sg. Buloh - Kajang (SBK) Line Stations</div>
+                <p><img src="~/Images/img-2.png" /></p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            </div>
+        <div class="box">
+            <div style="font-size: 15pt">MRT Information Truck</div>
+                <p><img src="~/Images/img-3.png" /></p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            </div>
+    </div>
+</section>

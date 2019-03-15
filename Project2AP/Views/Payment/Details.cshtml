@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Project2AP.Models.Payment>
+
+@{
+    if (ViewBag.Roles == "User")
+    {
+        ViewBag.Title = "Payment Details";
+        Layout = "~/Views/Shared/_Layout2.cshtml";
+    }
+
+    else if (ViewBag.Roles == "Admin")
+    {
+        ViewBag.Title = "Payment Details";
+        Layout = "~/Views/Shared/_Layout3.cshtml";
+    }
+}
+
+<section id="content-main">
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+                <td style="font-size: 15pt; vertical-align: top;">
+                    Payment Details
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 50%;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 150px;">
+                                <b>Name</b>
+                            </td>
+                            <td>
+                                @ViewBag.FirstName @ViewBag.LastName
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>IC Number</b>
+                            </td>
+                            <td>
+                                @ViewBag.IcNumber
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>E-mail</b>
+                            </td>
+                            <td>
+                                @ViewBag.Email
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Phone Number</b>
+                            </td>
+                            <td>
+                                @ViewBag.PhoneNumber
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 50%;">
+                    <table>
+                        <tr>
+                            <td style="width: 150px;">
+                                <b>Payment ID</b>
+                            </td>
+                            <td>
+                                @ViewBag.PaymentID
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Payment Method</b>
+                            </td>
+                            <td>
+                                @ViewBag.PaymentMethod
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Payment Date & Time</b>
+                            </td>
+                            <td>
+                                @ViewBag.PaymentDateTime
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Total</b>
+                            </td>
+                            <td>
+                                RM @ViewBag.Total.ToString("0.00")
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Ticket Order</b>
+                            </td>
+                            <td>
+                                @Html.ActionLink("View Order Here", "Receipt", "Ticket", new { paymentId = ViewBag.PaymentID }, new { @class = "link" })
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
