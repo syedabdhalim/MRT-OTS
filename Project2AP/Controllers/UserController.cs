@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,7 +20,7 @@ namespace Project2AP.Controllers
         [HttpGet]
         public ActionResult Register()
         {
-            return View();
+            return View(sasd);
         }
 
         [HttpPost]
