@@ -439,7 +439,7 @@
 .content-receipt4 {
     width: 220px;
     height: 150px;
-    padding: 35px 0px 35px 0;
+    padding: 35px 0 35px 0;
     background-color: #ec2633;
     text-align: center;
 }
@@ -464,11 +464,22 @@
     display: inline;
 }
 
-
 .button-list {
     background: url(~/Images/multiply.png) no-repeat top left;
     display: block;
     width: 20px;
     height: 20px;
     text-indent: -9999px;
+}
+
+.sort-dropdown {
+    padding: 7px;
+    background-color: white;
+    border: #d1d2d4 1pt solid;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: #333333;
+    font-size: 11pt;
+    font-family: 'Rubik', sans-serif;
 }

@@ -16,7 +16,25 @@
                 <td style="font-size: 15pt; vertical-align: top;">
                     User
                 </td>
-                <td style="text-align: right">                    
+                <td style="text-align: right">
+                    @{
+                        if (ViewBag.Roles == "Admin")
+                        {
+                            <!-- --------------------- SORT PUNYA DROP DOWN LIST --------------------- -->
+                            using (Html.BeginForm("Index", "User", FormMethod.Get))
+                            {
+                                @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
+                                <span style="padding-right: 10px;"></span>
+                                @Html.DropDownList("SortOrder", new[] {
+                                                         new SelectListItem() {Value = "E-mail: A to Z", Text = "E-mail: A to Z" },
+                                                         new SelectListItem() {Value = "E-mail: Z to A", Text = "E-mail: Z to A" }
+                                                    }, "Sort by", new { @class = "sort-dropdown" })
+
+                                @:<input type="submit" name="search" class="button3" value="Go" style="padding: 7px 20px 7px 20px" />
+                                @:<br /><br />
+                            }
+                        }
+                    }
                     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
                 </td>
             </tr>

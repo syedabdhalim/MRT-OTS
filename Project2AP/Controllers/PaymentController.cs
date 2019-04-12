@@ -19,7 +19,7 @@ namespace Project2AP.Controllers
 
 
 
-        public ActionResult Index(string searchText = "", int page = 1)
+        public ActionResult Index(string searchText = "", int page = 1, string sortOrder = "")
         {
             ViewBag.SearchText = searchText;
             int recordsPerPage = 10;
@@ -34,7 +34,20 @@ namespace Project2AP.Controllers
                 ViewBag.Roles = "User";
 
                 string email = Session["Email"].ToString();
-                var result = db.Payment.Where(x => x.Email == email).ToList().ToPagedList(page, recordsPerPage);
+                var items = db.Payment.Where(x => x.Email == email);
+                
+                switch (sortOrder)
+                {
+                    case "Latest First":
+                        items = db.Payment.Where(x => x.Email == email).OrderByDescending(x => x.PaymentID);
+                        break;
+
+                    case "Oldest First":
+                        items = db.Payment.Where(x => x.Email == email).OrderBy(x => x.PaymentID);
+                        break;
+                }
+
+                var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
                 {
@@ -52,8 +65,20 @@ namespace Project2AP.Controllers
             {
                 ViewBag.Roles = "Admin";
 
-                var items = db.Payment.Include(x => x.User);
-                var result = items.ToList().Where(x => x.Email.Contains(searchText)).ToPagedList(page, recordsPerPage);
+                var items = db.Payment.Include(x => x.User).Where(x => x.Email.Contains(searchText));
+
+                switch (sortOrder)
+                {
+                    case "Latest First":
+                        items = db.Payment.Include(x => x.User).Where(x => x.Email.Contains(searchText)).OrderByDescending(x => x.PaymentID);
+                        break;
+
+                    case "Oldest First":
+                        items = db.Payment.Include(x => x.User).Where(x => x.Email.Contains(searchText)).OrderBy(x => x.PaymentID);
+                        break;
+                }
+
+                var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
                 {

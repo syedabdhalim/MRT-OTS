@@ -17,7 +17,7 @@ namespace Project2AP.Controllers
     {
         private MrtContext db = new MrtContext();
 
-        public ActionResult Index(string searchText = "", int page = 1)
+        public ActionResult Index(string searchText = "", int page = 1, string sortOrder = "")
         {
             ViewBag.SearchText = searchText;
             int recordsPerPage = 10;
@@ -33,6 +33,18 @@ namespace Project2AP.Controllers
 
                 string email = Session["Email"].ToString();
                 var items = db.Purchase.Where(x => (x.Email == email) && x.Status == "Paid").Include(x => x.Payment);
+                
+                switch (sortOrder)
+                {
+                    case "Latest First":
+                        items = db.Purchase.Where(x => (x.Email == email) && x.Status == "Paid").Include(x => x.Payment).OrderByDescending(x => x.PurchaseID);
+                        break;
+
+                    case "Oldest First":
+                        items = db.Purchase.Where(x => (x.Email == email) && x.Status == "Paid").Include(x => x.Payment).OrderBy(x => x.PurchaseID);
+                        break;
+                }
+
                 var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
@@ -51,8 +63,20 @@ namespace Project2AP.Controllers
             {
                 ViewBag.Roles = "Admin";
 
-                var items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User);
-                var result = items.ToList().Where(x => x.Email.Contains(searchText)).ToPagedList(page, recordsPerPage);
+                var items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User).Where(x => x.Email.Contains(searchText));
+                
+                switch (sortOrder)
+                {
+                    case "Latest First":
+                        items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User).Where(x => x.Email.Contains(searchText)).OrderByDescending(x => x.PurchaseID);
+                        break;
+
+                    case "Oldest First":
+                        items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User).Where(x => x.Email.Contains(searchText)).OrderBy(x => x.PurchaseID);
+                        break;
+                }
+                
+                var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
                 {

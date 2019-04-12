@@ -20,7 +20,7 @@ namespace Project2AP.Controllers
         [HttpGet]
         public ActionResult Register()
         {
-            return View(sasd);
+            return View();
         }
 
         [HttpPost]
@@ -138,7 +138,7 @@ namespace Project2AP.Controllers
             }
 
         }
-        public ActionResult Index(string searchText = "", int page = 1)
+        public ActionResult Index(string searchText = "", int page = 1, string sortOrder = "")
         {
             if (Session["Roles"] == null)
             {
@@ -153,10 +153,23 @@ namespace Project2AP.Controllers
             else if (Session["Roles"].ToString() == "Admin")
             {
                 ViewBag.SearchText = searchText;
+                ViewBag.Roles = "Admin";
                 int recordsPerPage = 10;
 
-                var items = db.User.Where(x => x.Roles == "User");
-                var result = items.ToList().Where(x => x.Email.Contains(searchText)).ToPagedList(page, recordsPerPage);
+                var items = db.User.Where(x => x.Roles == "User").Where(x => x.Email.Contains(searchText));
+                
+                switch (sortOrder)
+                {
+                    case "E-mail: A to Z":
+                        items = db.User.Where(x => x.Roles == "User").Where(x => x.Email.Contains(searchText)).OrderBy(x => x.Email);
+                        break;
+
+                    case "E-mail: Z to A":
+                        items = db.User.Where(x => x.Roles == "User").Where(x => x.Email.Contains(searchText)).OrderByDescending(x => x.Email); ;
+                        break;
+                }
+
+                var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
                 {

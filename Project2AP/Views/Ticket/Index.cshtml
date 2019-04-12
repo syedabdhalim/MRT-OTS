@@ -24,20 +24,24 @@
             <tr>
                 <td style="font-size: 15pt; vertical-align: top;">
                     e-Ticket
-                </td>                
+                </td>
                 <td style="text-align: right">
                     @{
-                        if (ViewBag.Roles == "Admin")
+                        <!-- --------------------- SORT PUNYA DROP DOWN LIST --------------------- -->
+                        using (Html.BeginForm("Index", "Ticket", FormMethod.Get))
                         {
-                            <!-- --------------------- SORT PUNYA DROP DOWN LIST --------------------- -->
-                            using (Html.BeginForm("Index", "Ticket", FormMethod.Get))
-                            {
-                                @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
-                                @:<input type="submit" name="search" class="button3" value="Search" style="padding: 7px 20px 7px 20px" />
-
-                                @:<br /><br />
+                            if (ViewBag.Roles == "Admin")
+                            {                                
+                            @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
                             }
+                            <span style="padding-right: 10px;"></span>
+                            @Html.DropDownList("SortOrder", new[] {
+                                                                             new SelectListItem() {Value = "Latest First", Text = "Latest First" },
+                                                                             new SelectListItem() {Value = "Oldest First", Text = "Oldest First" }
+                                                                        }, "Sort by", new { @class = "sort-dropdown" })
 
+                            @:<input type="submit" name="search" class="button3" value="Go" style="padding: 7px 20px 7px 20px" />
+                            @:<br /><br />
                         }
                     }
                     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
