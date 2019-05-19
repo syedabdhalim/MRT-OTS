@@ -95,6 +95,45 @@ namespace Project2AP.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
+        
+        public ActionResult Index(string sortOrder, string q, int page = 1, int pageSize = 25)
+        {
+            ViewBag.searchQuery = String.IsNullOrEmpty(q) ? "" : q;
+
+            page = page > 0 ? page : 1;
+            pageSize = pageSize > 0 ? pageSize : 25;
+
+            ViewBag.NameSortParam = sortOrder == "name" ? "name_desc" : "name";
+            ViewBag.AddressSortParam = sortOrder == "address" ? "address_desc" : "address";
+            ViewBag.DateSortParam = sortOrder == "date" ? "date_desc" : "date";
+
+            ViewBag.CurrentSort = sortOrder;
+
+            DataService service = new DateService(db);
+            var query = service.GetAllOrderedListItems(q);
+
+            switch (sortOrder)
+            {
+                case "name":
+                    query = query.OrderBy(x => x.name);
+                    break;
+                case "address":
+                    query = query.OrderBy(x => x.address);
+                    break;
+                case "address_desc":
+                    query = query.OrderByDescending(x => x.address);
+                    break;
+                case "date":
+                    query = query.OrderBy(x => x.date);
+                    break;
+                case "date_desc":
+                    query = query.OrderByDescending(x => x.date);
+                    break;
+                default:
+                    break;
+            }
+            return View(query.ToPagedList(page, pageSize));
+        }
 
         [HttpGet]
         public ActionResult Purchase()
