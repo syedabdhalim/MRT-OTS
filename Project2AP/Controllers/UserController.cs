@@ -45,6 +45,7 @@ namespace Project2AP.Controllers
                 cmd.Parameters.AddWithValue("@PhoneNumber", user.PhoneNumber);
                 cmd.Parameters.AddWithValue("@Password", passwordhash);
                 cmd.Parameters.AddWithValue("@Roles", "User");
+                cmd.Parameters.AddWithValue("@RegistrationDateTime", DateTime.Now.ToString());
 
                 try
                 {
@@ -157,7 +158,7 @@ namespace Project2AP.Controllers
                 int recordsPerPage = 10;
 
                 var items = db.User.Where(x => x.Roles == "User").Where(x => x.Email.Contains(searchText));
-                
+
                 switch (sortOrder)
                 {
                     case "E-mail: A to Z":
@@ -199,7 +200,7 @@ namespace Project2AP.Controllers
 
             User user = db.User.Find(email);
 
-            if(user == null)
+            if (user == null)
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -245,6 +246,151 @@ namespace Project2AP.Controllers
             else
             {
                 return View();
+            }
+        }
+
+        public ActionResult Report()
+        {
+            ViewBag.Role = Session["Role"];
+            ViewBag.Name = Session["Name"];
+
+            if (Session["Roles"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            else if (Session["Roles"].ToString() == "Admin")
+            {
+
+                //Chart for types of users
+                int standard = db.Purchase.Where(x => x.Category == "Standard").Count();
+                int student = db.Purchase.Where(x => x.Category == "Student").Count();
+                int seniorCitizen = db.Purchase.Where(x => x.Category == "Senior Citizen").Count();
+                int disabled = db.Purchase.Where(x => x.Category == "Disabled").Count();
+
+                ViewBag.Standard = standard;
+                ViewBag.Student = student;
+                ViewBag.SeniorCitizen = seniorCitizen;
+                ViewBag.Disabled = disabled;
+
+                //Monthly Registration Chart
+                DateTime today = DateTime.Now;
+                int[] monthArray = new int[12];
+                int[] yearArray = new int[12];
+
+                int month = today.Month;
+                int year = today.Year;
+
+                int startMonth = (month == 12) ? 1 : (month + 1);
+                int startYear = (month == 12) ? year : (year - 1);
+
+                int counterMonth = startMonth;
+                int counterYear = startYear;
+
+                for (int i = 0; i < 12; i++)
+                {
+                    monthArray[i] = counterMonth;
+                    yearArray[i] = counterYear;
+
+                    if (counterMonth == 12)
+                    {
+                        counterMonth = 1;
+                        counterYear = counterYear + 1;
+                    }
+                    else
+                    {
+                        counterMonth = counterMonth + 1;
+                    }
+                }
+
+                int[] subscriptionPerMonthArray = new int[12];
+                for (int j = 0; j < 12; j++)
+                {
+                    month = monthArray[j];
+                    year = yearArray[j];
+
+                    subscriptionPerMonthArray[j] = db.User.Where(x => x.RegistrationDateTime.Month == month).Where(x => x.RegistrationDateTime.Year == year).Where(x => x.Roles != "Admin").Count();
+                }
+
+                ViewBag.SubscriptionArray = subscriptionPerMonthArray;
+
+                string[] monthYearArray = new string[12];
+                string monthName;
+
+                for (int k = 0; k < 12; k++)
+                {
+                    switch (monthArray[k])
+                    {
+                        case 1:
+                            monthName = "Jan";
+                            break;
+                        case 2:
+                            monthName = "Feb";
+                            break;
+                        case 3:
+                            monthName = "Mar";
+                            break;
+                        case 4:
+                            monthName = "Apr";
+                            break;
+                        case 5:
+                            monthName = "May";
+                            break;
+                        case 6:
+                            monthName = "Jun";
+                            break;
+                        case 7:
+                            monthName = "Jul";
+                            break;
+                        case 8:
+                            monthName = "Aug";
+                            break;
+                        case 9:
+                            monthName = "Sept";
+                            break;
+                        case 10:
+                            monthName = "Oct";
+                            break;
+                        case 11:
+                            monthName = "Nov";
+                            break;
+                        case 12:
+                            monthName = "Dec";
+                            break;
+                        default:
+                            monthName = "Invalid";
+                            break;
+                    }
+
+                    monthYearArray[k] = monthName + " " + yearArray[k].ToString();
+                }
+
+                ViewBag.MonthYear = monthYearArray;
+
+                //Total Registration
+                int totalRegistration = db.User.Where(x => x.Roles != "Admin").Count();
+                ViewBag.TotalRegistrations = totalRegistration;
+
+                //Highest Monthly Registration
+                int maxRegistration = subscriptionPerMonthArray.Max();
+                int maxRegistrationIndex = Array.IndexOf(subscriptionPerMonthArray, maxRegistration);
+
+                string maxRegistrationMonthYear = monthYearArray[maxRegistrationIndex];
+
+                ViewBag.MaxRegistration = maxRegistration;
+                ViewBag.MaxRegistrationMonthYear = maxRegistrationMonthYear;
+
+                //Average Registrations Per Month
+                double avgRegistration = double.Parse(totalRegistration.ToString()) / double.Parse((db.User.Where(x => x.Roles != "Admin").GroupBy(x => x.RegistrationDateTime.Month).Count()).ToString());
+                ViewBag.AverageRegistration = avgRegistration;
+
+                return View();
+
+            }
+
+            else
+            {
+                return RedirectToAction("Index", "Home");
             }
         }
     }

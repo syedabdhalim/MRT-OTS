@@ -39,6 +39,9 @@ namespace Project2AP.Models
         [Required(ErrorMessage = "Please select a role")]
         [Display(Name = "Roles")]
         public string Roles { get; set; }
+        
+        [Display(Name = "Registration Date Time")]
+        public DateTime RegistrationDateTime { get; set; }
 
         public virtual ICollection<Purchase> Purchases { get; set; }
         public virtual ICollection<Payment> Payments { get; set; }

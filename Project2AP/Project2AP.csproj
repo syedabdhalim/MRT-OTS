@@ -244,6 +244,7 @@
     <Content Include="Views\Ticket\MailReceipt.cshtml" />
     <Content Include="Views\Payment\Details.cshtml" />
     <Content Include="Views\Ticket\Report.cshtml" />
+    <Content Include="Views\User\Report.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

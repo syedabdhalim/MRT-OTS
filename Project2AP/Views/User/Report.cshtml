@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "User Report";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+    google.charts.setOnLoadCallback(drawUserCategoryChart);
+    google.charts.setOnLoadCallback(drawMonthlyUsersChart);
+
+        function drawUserCategoryChart() {
+        var data = new google.visualization.arrayToDataTable([
+            ["Category", "Tickets Purchased", { role: "style" }],
+            ["Standard", @(ViewBag.Standard), "#265BA9"],
+            ["Student", @(ViewBag.Student), "#ec2633"],
+            ["Senior Citizen", @(ViewBag.SeniorCitizen), "#3971C4"],
+            ["Disabled", @(ViewBag.Disabled), "#F54E59"]
+        ]);
+
+        var options = {
+            pieHole: 0.5,
+            width: '100%',
+            height: 270,
+            chartArea: { 'width': '80%', 'height': '80%' },
+            fontName: 'Roboto',
+            colors: ['#265BA9', '#ec2633', '#F5DE4E', '#DBDBDB'],
+            fontSize: 12,
+            legend: { position: 'none' },
+            animation: {
+                duration: 1500,
+                easing: 'out',
+                startup: true
+            }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('categories_div'));
+        chart.draw(data, options);
+        }
+    
+        function drawMonthlyUsersChart() {
+            var data = new google.visualization.DataTable
+
+            data.addColumn('string', "User");
+            data.addColumn('number', "Registrations");
+
+            data.addRows([
+                ["@(ViewBag.MonthYear[0])", @(ViewBag.SubscriptionArray[0])],
+                ["@(ViewBag.MonthYear[1])", @(ViewBag.SubscriptionArray[1])],
+                ["@(ViewBag.MonthYear[2])", @(ViewBag.SubscriptionArray[2])],
+                ["@(ViewBag.MonthYear[3])", @(ViewBag.SubscriptionArray[3])],
+                ["@(ViewBag.MonthYear[4])", @(ViewBag.SubscriptionArray[4])],
+                ["@(ViewBag.MonthYear[5])", @(ViewBag.SubscriptionArray[5])],
+                ["@(ViewBag.MonthYear[6])", @(ViewBag.SubscriptionArray[6])],
+                ["@(ViewBag.MonthYear[7])", @(ViewBag.SubscriptionArray[7])],
+                ["@(ViewBag.MonthYear[8])", @(ViewBag.SubscriptionArray[8])],
+                ["@(ViewBag.MonthYear[9])", @(ViewBag.SubscriptionArray[9])],
+                ["@(ViewBag.MonthYear[10])", @(ViewBag.SubscriptionArray[10])],
+                ["@(ViewBag.MonthYear[11])", @(ViewBag.SubscriptionArray[11])]
+            ]);
+
+            var options = {
+                width: '100%',
+                height: 270,
+                colors: ['#c681b6'],
+                curveType: 'function',
+                chartArea: { 'width': '90%', 'height': '90%' },
+                fontName: 'Roboto',
+                fontSize: 12,
+                vAxis: {
+                    'baselineColor': '#DDD',
+                    'gridlines': {
+                        'color': 'white'
+                    }
+                },
+                legend: { position: 'none' },
+                animation: {
+                    duration: 1500,
+                    easing: 'out',
+                    startup: true
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('users_div'));
+            chart.draw(data, options);
+        }
+</script>
+
+
+<section id="content-main">
+    <div class="container">
+        <div class="graph-flex-container">
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Total Registrations</b><br />
+                        <span class="graph-big-text">@ViewBag.TotalRegistrations users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Highest monthly registration</b><br />
+                        <span class="graph-big-text">@ViewBag.MaxRegistrationMonthYear - @ViewBag.MaxRegistration users</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Average Registrations Per Month</b><br />
+                        <span class="graph-big-text">@ViewBag.AverageRegistration users
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table style="width: 100%">
+            <tr>
+                <td style="width:40%; padding-right: 10px;">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Categories of User for Ticket Purchases</b><br />
+                            <div id="categories_div"></div>
+                        </center>
+                    </div>
+                </td>
+                <td style="width: 60%; padding-left: 10px;">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Monthly Ticket Purchases</b><br />
+                            <div id="users_div"></div>
+                        </center>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%">
+            <tr>
+                <td style="text-align: right">
+                    <button class="button3" onclick="location.href='@Url.Action("Index", "User")';return false;">View User Record</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
