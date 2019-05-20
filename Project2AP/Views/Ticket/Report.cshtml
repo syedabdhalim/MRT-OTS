@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "e-Ticket Record";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        google.charts.setOnLoadCallback(drawOriginChart);
+        google.charts.setOnLoadCallback(drawDestinationChart);
+        google.charts.setOnLoadCallback(drawMonthlyTicketsChart);
+
+        function drawOriginChart() {
+            var data = new google.visualization.arrayToDataTable([
+                ["Origin", "Tickets", { role: "style" }],
+                ["@(ViewBag.O1Name)", @(ViewBag.O1), "stroke-color: #ea7575; stroke-opacity: 0.8; stroke-width: 2; fill-color: #ea7575; fill-opacity: 0.4"],
+                ["@(ViewBag.O2Name)", @(ViewBag.O2), "stroke-color: #52be80; stroke-opacity: 0.8; stroke-width: 2; fill-color: #52be80; fill-opacity: 0.4"],
+                ["@(ViewBag.O3Name)", @(ViewBag.O3), "stroke-color: #58a9c1; stroke-opacity: 0.8; stroke-width: 2; fill-color: #58a9c1; fill-opacity: 0.4"]
+            ]);
+
+            var options = {
+                width: '100%',
+                height: 270,
+                chartArea: { 'width': '80%', 'height': '80%' },
+                fontName: 'Roboto',
+                fontSize: 12,
+                vAxis: {
+                    'baselineColor': '#DDD',
+                    'gridlines': {
+                        'color': 'white'
+                    }
+                },
+                legend: { position: 'none' },
+                animation: {
+                    duration: 1500,
+                    easing: 'out',
+                    startup: true
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('origin_div'));
+            chart.draw(data, options);
+        }
+
+        function drawDestinationChart() {
+            var data = new google.visualization.arrayToDataTable([
+                ["Destination", "Tickets", { role: "style" }],
+                ["@(ViewBag.D1Name)", @(ViewBag.D1), "stroke-color: #ea7575; stroke-opacity: 0.8; stroke-width: 2; fill-color: #ea7575; fill-opacity: 0.4"],
+                ["@(ViewBag.D2Name)", @(ViewBag.D2), "stroke-color: #52be80; stroke-opacity: 0.8; stroke-width: 2; fill-color: #52be80; fill-opacity: 0.4"],
+                ["@(ViewBag.D3Name)", @(ViewBag.D3), "stroke-color: #58a9c1; stroke-opacity: 0.8; stroke-width: 2; fill-color: #58a9c1; fill-opacity: 0.4"]
+            ]);
+
+            var options = {
+                width: '100%',
+                height: 270,
+                chartArea: { 'width': '80%', 'height': '80%' },
+                fontName: 'Roboto',
+                fontSize: 12,
+                vAxis: {
+                    'baselineColor': '#DDD',
+                    'gridlines': {
+                        'color': 'white'
+                    }
+                },
+                legend: { position: 'none' },
+                animation: {
+                    duration: 1500,
+                    easing: 'out',
+                    startup: true
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('destination_div'));
+            chart.draw(data, options);
+        }
+
+        function drawMonthlyTicketsChart() {
+            var data = new google.visualization.DataTable
+
+            data.addColumn('string', "Roles");
+            data.addColumn('number', "Tickets");
+
+            data.addRows([
+                ["@(ViewBag.MonthYear[0])", @(ViewBag.SubscriptionArray[0])],
+                ["@(ViewBag.MonthYear[1])", @(ViewBag.SubscriptionArray[1])],
+                ["@(ViewBag.MonthYear[2])", @(ViewBag.SubscriptionArray[2])],
+                ["@(ViewBag.MonthYear[3])", @(ViewBag.SubscriptionArray[3])],
+                ["@(ViewBag.MonthYear[4])", @(ViewBag.SubscriptionArray[4])],
+                ["@(ViewBag.MonthYear[5])", @(ViewBag.SubscriptionArray[5])],
+                ["@(ViewBag.MonthYear[6])", @(ViewBag.SubscriptionArray[6])],
+                ["@(ViewBag.MonthYear[7])", @(ViewBag.SubscriptionArray[7])],
+                ["@(ViewBag.MonthYear[8])", @(ViewBag.SubscriptionArray[8])],
+                ["@(ViewBag.MonthYear[9])", @(ViewBag.SubscriptionArray[9])],
+                ["@(ViewBag.MonthYear[10])", @(ViewBag.SubscriptionArray[10])],
+                ["@(ViewBag.MonthYear[11])", @(ViewBag.SubscriptionArray[11])]
+            ]);
+
+            var options = {
+                width: '100%',
+                height: 270,
+                colors: ['#c681b6'],
+                curveType: 'function',
+                chartArea: { 'width': '90%', 'height': '90%' },
+                fontName: 'Roboto',
+                fontSize: 12,
+                vAxis: {
+                    'baselineColor': '#DDD',
+                    'gridlines': {
+                        'color': 'white'
+                    }
+                },
+                legend: { position: 'none' },
+                animation: {
+                    duration: 1500,
+                    easing: 'out',
+                    startup: true
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('tickets_div'));
+            chart.draw(data, options);
+        }
+</script>
+
+
+<section id="content-main">
+    <div class="container">
+        <div class="graph-flex-container">
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Total Tickets Sold</b><br />
+                        <span class="graph-big-text">@ViewBag.NumberOfSubscriptions tickets</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Most Purchased Ticket Station</b><br />
+                        <span class="graph-big-text">@ViewBag.S1Name - @ViewBag.S1 tickets</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Least Purchased Ticket Station</b><br />
+                        <span class="graph-big-text">@ViewBag.L1Name - @ViewBag.L1 ticket(s)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table style="width: 100%">
+            <tr>
+                <td style="width:30%; padding-right: 10px;">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Most purchased origin tickets</b><br />
+                            <div id="origin_div"></div>
+                        </center>
+                    </div>
+                </td>
+                <td style="width: 30%; padding-left: 10px; padding-right: 10px">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Most purchased destination tickets</b><br />
+                            <div id="destination_div"></div>
+                        </center>
+                    </div>
+                </td>
+                <td style="width: 40%; padding-left: 10px;">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Monthly Ticket Purchases</b><br />
+                            <div id="tickets_div"></div>
+                        </center>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%">
+            <tr>
+                <td style="text-align: right">
+                    <button class="button3" onclick="location.href='@Url.Action("Index", "Ticket")';return false;">View Ticket Record</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

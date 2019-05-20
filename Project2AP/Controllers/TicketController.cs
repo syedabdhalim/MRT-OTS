@@ -16,7 +16,7 @@ namespace Project2AP.Controllers
     public class TicketController : Controller
     {
         private MrtContext db = new MrtContext();
-
+        
         public ActionResult Index(string searchText = "", int page = 1, string sortOrder = "")
         {
             ViewBag.SearchText = searchText;
@@ -33,7 +33,7 @@ namespace Project2AP.Controllers
 
                 string email = Session["Email"].ToString();
                 var items = db.Purchase.Where(x => (x.Email == email) && x.Status == "Paid").Include(x => x.Payment);
-                
+
                 switch (sortOrder)
                 {
                     case "Latest First":
@@ -64,7 +64,7 @@ namespace Project2AP.Controllers
                 ViewBag.Roles = "Admin";
 
                 var items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User).Where(x => x.Email.Contains(searchText));
-                
+
                 switch (sortOrder)
                 {
                     case "Latest First":
@@ -75,7 +75,7 @@ namespace Project2AP.Controllers
                         items = db.Purchase.Where(x => x.Status == "Paid").Include(x => x.Payment).Include(x => x.User).Where(x => x.Email.Contains(searchText)).OrderBy(x => x.PurchaseID);
                         break;
                 }
-                
+
                 var result = items.ToList().ToPagedList(page, recordsPerPage);
 
                 if (!result.Any())
@@ -95,44 +95,184 @@ namespace Project2AP.Controllers
                 return RedirectToAction("Index", "Home");
             }
         }
-        
-        public ActionResult Index(string sortOrder, string q, int page = 1, int pageSize = 25)
+
+        public ActionResult Report()
         {
-            ViewBag.searchQuery = String.IsNullOrEmpty(q) ? "" : q;
-
-            page = page > 0 ? page : 1;
-            pageSize = pageSize > 0 ? pageSize : 25;
-
-            ViewBag.NameSortParam = sortOrder == "name" ? "name_desc" : "name";
-            ViewBag.AddressSortParam = sortOrder == "address" ? "address_desc" : "address";
-            ViewBag.DateSortParam = sortOrder == "date" ? "date_desc" : "date";
-
-            ViewBag.CurrentSort = sortOrder;
-
-            DataService service = new DateService(db);
-            var query = service.GetAllOrderedListItems(q);
-
-            switch (sortOrder)
+            ViewBag.Role = Session["Role"];
+            ViewBag.Name = Session["Name"];
+            
+            if (Session["Roles"] == null)
             {
-                case "name":
-                    query = query.OrderBy(x => x.name);
-                    break;
-                case "address":
-                    query = query.OrderBy(x => x.address);
-                    break;
-                case "address_desc":
-                    query = query.OrderByDescending(x => x.address);
-                    break;
-                case "date":
-                    query = query.OrderBy(x => x.date);
-                    break;
-                case "date_desc":
-                    query = query.OrderByDescending(x => x.date);
-                    break;
-                default:
-                    break;
+                return RedirectToAction("Login", "User");
             }
-            return View(query.ToPagedList(page, pageSize));
+
+            else if (Session["Roles"].ToString() == "Admin")
+            {
+
+            //Chart for top 3 origin
+            string[] originArray = db.Purchase.Select(x => x.Origin).ToArray();
+            string[] originArrayName = originArray.GroupBy(x => x).OrderByDescending(group => group.Count()).Select(group => group.Key).ToArray();
+
+            int[] topOrigin = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                topOrigin[i] = originArray.Where(x => x == originArrayName[i]).Count();
+            }
+
+            ViewBag.O1 = topOrigin[0];
+            ViewBag.O2 = topOrigin[1];
+            ViewBag.O3 = topOrigin[2];
+
+            ViewBag.O1Name = originArrayName[0];
+            ViewBag.O2Name = originArrayName[1];
+            ViewBag.O3Name = originArrayName[2];
+
+            //Chart for top 3 destination
+            string[] destinationArray = db.Purchase.Select(x => x.Destination).ToArray();
+            string[] destinationArrayName = destinationArray.GroupBy(x => x).OrderByDescending(group => group.Count()).Select(group => group.Key).ToArray();
+            
+            int[] topDestination = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                topDestination[i] = destinationArray.Where(x => x == destinationArrayName[i]).Count();
+            }
+
+            ViewBag.D1 = topDestination[0];
+            ViewBag.D2 = topDestination[1];
+            ViewBag.D3 = topDestination[2];
+            
+            ViewBag.D1Name = destinationArrayName[0];
+            ViewBag.D2Name = destinationArrayName[1];
+            ViewBag.D3Name = destinationArrayName[2];
+
+            //Chart for total tickets
+
+            //Monthly Subscription Chart
+            DateTime today = DateTime.Now;
+            int[] monthArray = new int[12];
+            int[] yearArray = new int[12];
+
+            int month = today.Month;
+            int year = today.Year;
+
+            int startMonth = (month == 12) ? 1 : (month + 1);
+            int startYear = (month == 12) ? year : (year - 1);
+
+            int counterMonth = startMonth;
+            int counterYear = startYear;
+
+            for (int i = 0; i < 12; i++)
+            {
+                monthArray[i] = counterMonth;
+                yearArray[i] = counterYear;
+
+                if (counterMonth == 12)
+                {
+                    counterMonth = 1;
+                    counterYear = counterYear + 1;
+                }
+                else
+                {
+                    counterMonth = counterMonth + 1;
+                }
+            }
+
+            int[] subscriptionPerMonthArray = new int[12];
+
+            for (int j = 0; j < 12; j++)
+            {
+                month = monthArray[j];
+                year = yearArray[j];
+
+                subscriptionPerMonthArray[j] = db.Purchase.Where(x => x.Payment.PaymentDateTime.Month == month).Where(x => x.Payment.PaymentDateTime.Year == year).Where(x => x.Status == "Paid").Count();
+            }
+
+            ViewBag.SubscriptionArray = subscriptionPerMonthArray;
+
+            string[] monthYearArray = new string[12];
+            string monthName;
+
+            for (int k = 0; k < 12; k++)
+            {
+                switch (monthArray[k])
+                {
+                    case 1:
+                        monthName = "Jan";
+                        break;
+                    case 2:
+                        monthName = "Feb";
+                        break;
+                    case 3:
+                        monthName = "Mar";
+                        break;
+                    case 4:
+                        monthName = "Apr";
+                        break;
+                    case 5:
+                        monthName = "May";
+                        break;
+                    case 6:
+                        monthName = "Jun";
+                        break;
+                    case 7:
+                        monthName = "Jul";
+                        break;
+                    case 8:
+                        monthName = "Aug";
+                        break;
+                    case 9:
+                        monthName = "Sept";
+                        break;
+                    case 10:
+                        monthName = "Oct";
+                        break;
+                    case 11:
+                        monthName = "Nov";
+                        break;
+                    case 12:
+                        monthName = "Dec";
+                        break;
+                    default:
+                        monthName = "Invalid";
+                        break;
+                }
+
+                monthYearArray[k] = monthName + " " + yearArray[k].ToString();
+            }
+
+            ViewBag.MonthYear = monthYearArray;
+
+            //Number of Purchases
+            ViewBag.NumberOfSubscriptions = db.Purchase.Where(x => x.Status == "Paid").ToList().Select(x => x.PurchaseID).Count();
+
+            //Famous station
+            string[] stationsArray = originArray.Concat(destinationArray).ToArray();
+            string[] stationsArrayName = stationsArray.GroupBy(x => x).OrderByDescending(group => group.Count()).Select(group => group.Key).ToArray();
+            
+            int topStation = stationsArray.Where(x => x == stationsArrayName[0]).Count();
+
+            ViewBag.S1 = topStation;
+            ViewBag.S1Name = stationsArrayName[0];
+
+            //Famous station
+            string[] stationsArray2 = originArray.Concat(destinationArray).ToArray();
+            string[] stationsArrayName2 = stationsArray2.GroupBy(x => x).OrderBy(group => group.Count()).Select(group => group.Key).ToArray();
+
+            int leastStation = stationsArray2.Where(x => x == stationsArrayName2[0]).Count();
+
+            ViewBag.L1 = leastStation;
+            ViewBag.L1Name = stationsArrayName2[0];
+
+            return View();
+
+            }
+
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         [HttpGet]

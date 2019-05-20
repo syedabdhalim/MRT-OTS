@@ -243,6 +243,7 @@
     <Content Include="Views\User\Update.cshtml" />
     <Content Include="Views\Ticket\MailReceipt.cshtml" />
     <Content Include="Views\Payment\Details.cshtml" />
+    <Content Include="Views\Ticket\Report.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

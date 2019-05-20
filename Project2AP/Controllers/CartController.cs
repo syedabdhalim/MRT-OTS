@@ -17,6 +17,7 @@ namespace Project2AP.Controllers
         // GET: Cart
         public ActionResult Index()
         {
+            //try test
             if (Session["Roles"] == null)
             {
                 return RedirectToAction("Login", "User");

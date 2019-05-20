@@ -483,3 +483,63 @@
     font-size: 11pt;
     font-family: 'Rubik', sans-serif;
 }
+
+
+/* -------- Graph -------- */
+.graph-flex-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.graph-flex-box-1 {
+    width: 100%;
+}
+
+.graph-flex-box-3 {
+    width: 32%;
+}
+
+.graph-box-1 {
+    min-height: 270px;
+    padding: 20px;
+    border: 1pt solid #dddddd;
+    border-radius: 8px;
+}
+
+.graph-box-3 {
+    background-color: #f3f3f3;
+    min-height: 80px;
+    padding: 20px;
+    border: 1pt solid #dddddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.graph-box-white-3 {
+    min-height: 200px;
+    padding: 20px;
+    border: 1pt solid #dddddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.center-display-cell {
+    display: table-cell;
+    text-align: center;
+    width: 100%
+}
+
+.graph-big-text {
+    font-size: 16pt;
+    line-height: 36px;
+}
+
+.chart-responsive {
+    width: 100%;
+}
