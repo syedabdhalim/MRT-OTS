@@ -17,8 +17,6 @@ namespace Project2AP.Controllers
     {
         private MrtContext db = new MrtContext();
 
-
-
         public ActionResult Index(string searchText = "", int page = 1, string sortOrder = "")
         {
             ViewBag.SearchText = searchText;
@@ -35,7 +33,7 @@ namespace Project2AP.Controllers
 
                 string email = Session["Email"].ToString();
                 var items = db.Payment.Where(x => x.Email == email);
-                
+
                 switch (sortOrder)
                 {
                     case "Latest First":
@@ -56,7 +54,7 @@ namespace Project2AP.Controllers
                 else
                 {
                     ViewBag.Item = 1;
-                }                
+                }
 
                 return View(result);
             }
@@ -90,6 +88,143 @@ namespace Project2AP.Controllers
                 }
 
                 return View(result);
+            }
+
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
+        }
+
+        public ActionResult Report()
+        {
+            ViewBag.Role = Session["Role"];
+            ViewBag.Name = Session["Name"];
+
+            if (Session["Roles"] == null)
+            {
+                return RedirectToAction("Login", "User");
+            }
+
+            else if (Session["Roles"].ToString() == "Admin")
+            {
+                //Monthly Payment Chart
+                DateTime today = DateTime.Now;
+                int[] monthArray = new int[12];
+                int[] yearArray = new int[12];
+
+                int month = today.Month;
+                int year = today.Year;
+
+                int startMonth = (month == 12) ? 1 : (month + 1);
+                int startYear = (month == 12) ? year : (year - 1);
+
+                int counterMonth = startMonth;
+                int counterYear = startYear;
+
+                for (int i = 0; i < 12; i++)
+                {
+                    monthArray[i] = counterMonth;
+                    yearArray[i] = counterYear;
+
+                    if (counterMonth == 12)
+                    {
+                        counterMonth = 1;
+                        counterYear = counterYear + 1;
+                    }
+                    else
+                    {
+                        counterMonth = counterMonth + 1;
+                    }
+                }
+
+                double[] subscriptionPerMonthArray = new double[12];
+                List<Payment> tempMonthlyPayment = new List<Payment>();
+                
+                for (int j = 0; j < 12; j++)
+                {
+                    month = monthArray[j];
+                    year = yearArray[j];
+
+                    tempMonthlyPayment = db.Payment.Where(x => x.PaymentDateTime.Month == month).Where(x => x.PaymentDateTime.Year == year).ToList();
+                    
+                    subscriptionPerMonthArray[j] = Math.Round(tempMonthlyPayment.Select(x => x.Total).Sum(), 2);
+                }
+
+                ViewBag.SubscriptionArray = subscriptionPerMonthArray;
+
+                string[] monthYearArray = new string[12];
+                string monthName;
+
+                for (int k = 0; k < 12; k++)
+                {
+                    switch (monthArray[k])
+                    {
+                        case 1:
+                            monthName = "Jan";
+                            break;
+                        case 2:
+                            monthName = "Feb";
+                            break;
+                        case 3:
+                            monthName = "Mar";
+                            break;
+                        case 4:
+                            monthName = "Apr";
+                            break;
+                        case 5:
+                            monthName = "May";
+                            break;
+                        case 6:
+                            monthName = "Jun";
+                            break;
+                        case 7:
+                            monthName = "Jul";
+                            break;
+                        case 8:
+                            monthName = "Aug";
+                            break;
+                        case 9:
+                            monthName = "Sept";
+                            break;
+                        case 10:
+                            monthName = "Oct";
+                            break;
+                        case 11:
+                            monthName = "Nov";
+                            break;
+                        case 12:
+                            monthName = "Dec";
+                            break;
+                        default:
+                            monthName = "Invalid";
+                            break;
+                    }
+
+                    monthYearArray[k] = monthName + " " + yearArray[k].ToString();
+                }
+
+                ViewBag.MonthYear = monthYearArray;
+
+                //Total Payment
+                double totalPayment = Math.Round(db.Payment.ToList().Select(x => x.Total).Sum(), 2);
+                ViewBag.TotalPayment = totalPayment;
+
+                //Highest Monthly Payment
+                double maxPayment = subscriptionPerMonthArray.Max();
+                int maxPaymentIndex = Array.IndexOf(subscriptionPerMonthArray, maxPayment);
+
+                string maxPaymentMonthYear = monthYearArray[maxPaymentIndex];
+
+                ViewBag.MaxPayment = maxPayment;
+                ViewBag.MaxPaymentMonthYear = maxPaymentMonthYear;
+
+                //Average Registrations Per Month
+                double avgPayment = double.Parse(totalPayment.ToString()) / double.Parse((db.Payment.GroupBy(x => x.PaymentDateTime.Month).Count()).ToString());
+                ViewBag.AveragePayment = avgPayment;
+
+                return View();
+
             }
 
             else

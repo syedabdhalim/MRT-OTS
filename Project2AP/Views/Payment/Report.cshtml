@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Payment Report";
+    Layout = "~/Views/Shared/_Layout3.cshtml";
+}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+    
+        google.charts.setOnLoadCallback(drawMonthlyPaymentsChart);
+    
+        function drawMonthlyPaymentsChart() {
+            var data = new google.visualization.DataTable
+
+            data.addColumn('string', "Payment");
+            data.addColumn('number', "Total (RM)");
+
+            data.addRows([
+                ["@(ViewBag.MonthYear[0])", @(ViewBag.SubscriptionArray[0])],
+                ["@(ViewBag.MonthYear[1])", @(ViewBag.SubscriptionArray[1])],
+                ["@(ViewBag.MonthYear[2])", @(ViewBag.SubscriptionArray[2])],
+                ["@(ViewBag.MonthYear[3])", @(ViewBag.SubscriptionArray[3])],
+                ["@(ViewBag.MonthYear[4])", @(ViewBag.SubscriptionArray[4])],
+                ["@(ViewBag.MonthYear[5])", @(ViewBag.SubscriptionArray[5])],
+                ["@(ViewBag.MonthYear[6])", @(ViewBag.SubscriptionArray[6])],
+                ["@(ViewBag.MonthYear[7])", @(ViewBag.SubscriptionArray[7])],
+                ["@(ViewBag.MonthYear[8])", @(ViewBag.SubscriptionArray[8])],
+                ["@(ViewBag.MonthYear[9])", @(ViewBag.SubscriptionArray[9])],
+                ["@(ViewBag.MonthYear[10])", @(ViewBag.SubscriptionArray[10])],
+                ["@(ViewBag.MonthYear[11])", @(ViewBag.SubscriptionArray[11])]
+            ]);
+
+            var options = {
+                width: '100%',
+                height: 270,
+                colors: ['#c681b6'],
+                curveType: 'function',
+                chartArea: { 'width': '90%', 'height': '90%' },
+                fontName: 'Roboto',
+                fontSize: 12,
+                vAxis: {
+                    'baselineColor': '#DDD',
+                    'gridlines': {
+                        'color': 'white'
+                    }
+                },
+                legend: { position: 'none' },
+                animation: {
+                    duration: 1500,
+                    easing: 'out',
+                    startup: true
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('payments_div'));
+            chart.draw(data, options);
+        }
+</script>
+
+
+<section id="content-main">
+    <div class="container">
+        <div class="graph-flex-container">
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Total payments</b><br />
+                        <span class="graph-big-text">RM @ViewBag.TotalPayment.ToString("0.00")</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Highest monthly payment</b><br />
+                        <span class="graph-big-text">@ViewBag.MaxPaymentMonthYear - RM @ViewBag.MaxPayment.ToString("0.00")</span>
+                    </div>
+                </div>
+            </div>
+            <div class="graph-flex-box-3">
+                <div class="graph-box-3">
+                    <div style="line-height: 30px">
+                        <b>Average total payment per month</b><br />
+                        <span class="graph-big-text">
+                            RM @ViewBag.AveragePayment.ToString("0.00")
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 100%; padding-left: 10px;">
+                    <div style="height: 270px; padding: 20px; border: 1pt solid #dddddd; border-radius: 8px;">
+                        <center>
+                            <b>Monthly Total Payments Made</b><br />
+                            <div id="payments_div"></div>
+                        </center>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%">
+            <tr>
+                <td style="text-align: right">
+                    <button class="button3" onclick="location.href='@Url.Action("Index", "Payment")';return false;">View Payment Record</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

@@ -22,8 +22,12 @@
     <div class="container">
         <table style="width: 100%;">
             <tr>
-                <td style="font-size: 15pt; vertical-align: top;">
-                    Payment
+                <td style="vertical-align: top;">
+                    <div style="font-size: 15pt; padding-bottom: 25px">Payment Record</div>
+                    @if (ViewBag.Roles == "Admin")
+                    {
+                        <a href="@Url.Action("Report", "Payment")">< Go back to payment report</a>
+                    }
                 </td>
 
                 <td style="text-align: right">
@@ -37,14 +41,14 @@
                             }
                             <span style="padding-right: 10px;"></span>
                             @Html.DropDownList("SortOrder", new[] {
-                                                             new SelectListItem() {Value = "Latest First", Text = "Latest First" },
-                                                             new SelectListItem() {Value = "Oldest First", Text = "Oldest First" }
-                                                        }, "Sort by", new { @class = "sort-dropdown" })
+                                                                         new SelectListItem() {Value = "Latest First", Text = "Latest First" },
+                                                                         new SelectListItem() {Value = "Oldest First", Text = "Oldest First" }
+                                                                    }, "Sort by", new { @class = "sort-dropdown" })
 
 
                             @:<input type="submit" name="search" class="button3" value="Go" style="padding: 7px 20px 7px 20px" />
                             @:<br /><br />
-            }
+                        }
                     }
                     Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
                 </td>

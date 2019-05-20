@@ -24,7 +24,10 @@
             <tr>
                 <td style="vertical-align: top;">
                     <div style="font-size: 15pt; padding-bottom: 25px">e-Ticket Record</div>
-                    <a href="@Url.Action("Report", "Ticket")">< Go back to e-Ticket report</a>
+                    @if (ViewBag.Roles == "Admin")
+                    {
+                        <a href="@Url.Action("Report", "Ticket")">< Go back to e-Ticket report</a>
+                    }
                 </td>
                 <td style="text-align: right">
                     @{
@@ -32,14 +35,14 @@
                         using (Html.BeginForm("Index", "Ticket", FormMethod.Get))
                         {
                             if (ViewBag.Roles == "Admin")
-                            {                                
-                            @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
+                            {
+                                @Html.TextBox("SearchText", null, new { @class = "textbox-search", @placeholder = "Search by e-mail" });
                             }
                             <span style="padding-right: 10px;"></span>
                             @Html.DropDownList("SortOrder", new[] {
-                                                                             new SelectListItem() {Value = "Latest First", Text = "Latest First" },
-                                                                             new SelectListItem() {Value = "Oldest First", Text = "Oldest First" }
-                                                                        }, "Sort by", new { @class = "sort-dropdown" })
+                                                                                         new SelectListItem() {Value = "Latest First", Text = "Latest First" },
+                                                                                         new SelectListItem() {Value = "Oldest First", Text = "Oldest First" }
+                                                                                    }, "Sort by", new { @class = "sort-dropdown" })
 
                             @:<input type="submit" name="search" class="button3" value="Go" style="padding: 7px 20px 7px 20px" />
                             @:<br /><br />
