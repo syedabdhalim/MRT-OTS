@@ -1,4 +1,4 @@
-﻿//This is done to test 
+﻿//This is done to test
 @{
     ViewBag.Title = "Home Page";
 
@@ -31,7 +31,7 @@
     </div>
 </section>
 
-<section id="content-3">
+<section id="content-3" style="height: 180px">
     <div class="container">
         <div class="box">
             <div style="font-size: 15pt">Park N' Ride</div>
@@ -42,13 +42,27 @@
         </div>
         <div class="box">
             <div style="font-size: 15pt">Sg. Buloh - Kajang (SBK) Line Stations</div>
-                <p><img src="~/Images/img-2.png" /></p>
-                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-            </div>
+            <p><img src="~/Images/img-2.png" /></p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
         <div class="box">
             <div style="font-size: 15pt">MRT Information Truck</div>
-                <p><img src="~/Images/img-3.png" /></p>
-                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-            </div>
+            <p><img src="~/Images/img-3.png" /></p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>
+</section>
+
+<section id="content-main">
+    <div class="container">
+        <div style="font-size: 15pt">
+            Ticket Price List
+        </div>
+        <div style="width: 100%">
+            <img src="~/Images/mrt-price-list.jpg" style="width: 100%; cursor: pointer" onclick="window.open('@Url.Action("PriceList", "Home")', '_blank');" />
+        </div>
+        <div style="width: 100%; text-align: right">
+            Click image to zoom in
+        </div>
     </div>
 </section>

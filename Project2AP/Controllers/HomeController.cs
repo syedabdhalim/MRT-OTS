@@ -35,5 +35,10 @@ namespace Project2AP.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public ActionResult PriceList()
+        {
+            return View();
+        }
     }
 }

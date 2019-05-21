@@ -191,6 +191,7 @@
     <Content Include="Images\img-2.png" />
     <Content Include="Images\img-3.png" />
     <Content Include="Images\logout.png" />
+    <Content Include="Images\mrt-price-list.jpg" />
     <Content Include="Images\profile.png" />
     <Content Include="Images\mrt.png" />
     <Content Include="Images\multiply.png" />
@@ -246,6 +247,7 @@
     <Content Include="Views\Ticket\Report.cshtml" />
     <Content Include="Views\User\Report.cshtml" />
     <Content Include="Views\Payment\Report.cshtml" />
+    <Content Include="Views\Home\PriceList.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
