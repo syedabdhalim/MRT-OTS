@@ -160,7 +160,7 @@
 
     #content-main .container {
         padding-top: 60px;
-        min-height: 424px;
+        min-height: 500px;
     }
 
     #content-main table td {
@@ -227,7 +227,7 @@
 #loginform .container {
     padding-top: 60px;
     width: 100%;
-    min-height: 504px;
+    min-height: 541px;
     background-color: white;
     display: flex;
     align-items: center;
